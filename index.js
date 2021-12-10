@@ -17,7 +17,7 @@ const musicHandler = require("./music");
 
 const deployCommands = require("./deploy-commands");
 
-const config = require("./config.json");
+//const config = require("./config.json");
 
 //Setting all the commands to the collection
 client.commands = new Collection();
@@ -129,5 +129,5 @@ client.on("interactionCreate", async (interaction) => {
   }
 });
 
-const TOKEN = config["TOKEN"];
+const TOKEN = process.env.TOKEN;
 client.login(TOKEN);
